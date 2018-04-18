@@ -11,7 +11,7 @@ _NB_: This project is originally forked from [udjamaflip/combination-generator](
 
 
 [![npm version](https://badge.fury.io/js/ngx-combination-generator.svg)](https://badge.fury.io/js/ngx-combination-generator),
-[![npm](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://anthonynahas.github.io/ngx-combination-generator)
+[![npm](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://anthonynahas.github.io/combination-generator)
 [![Coverage Status](https://coveralls.io/repos/github/anthonynahas/combination-generator/badge.svg?branch=master)](https://coveralls.io/github/anthonynahas/combination-generator?branch=master)
 [![dependency Status](https://david-dm.org/anthonynahas/combination-generator/status.svg)](https://david-dm.org/anthonynahas/combination-generator)
 [![devDependency Status](https://david-dm.org/anthonynahas/combination-generator/dev-status.svg?branch=master)](https://david-dm.org/anthonynahas/combination-generator#info=devDependencies)
