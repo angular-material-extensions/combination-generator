@@ -86,6 +86,40 @@ export class OtherModule {
 
 ## Usage
 
+### with Angular
+
+Inject the `NgxCombinationGeneratorService` in your component and go! See below
+
+```ts
+import {Component, OnInit} from '@angular/core';
+             import {NgxCombinationGeneratorService} from 'ngx-combination-generator';
+
+             @Component({
+               selector: 'app-your-component',
+               templateUrl: './your.component.html',
+               styleUrls: ['./your.component.scss']
+             })
+             export class YourComponent implements OnInit {
+
+               min = 1;
+               max = 2;
+               selectedChars: string;
+               charsList: string[] = ['a', 'b', 'c', '1', '2', '3'];
+               combinationsList: string[] = [];
+
+               constructor(public generator: NgxCombinationGeneratorService) {
+               }
+               
+               generate() {
+                 this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max);
+                 console.log("this.combinationsList = ", this.combinationsList);
+                 // output = ["a", "b", "c", "1", "2", "3", "aa", "ab", "ac", "a1", "a2", "a3", "ba", "bb", "bc", "b1", "b2", "b3", "ca",
+                 // " cb", "cc", "c1", "c2", "c3", "1a", "1b", "1c", "11", "12", "13", "2a", "2b", "2c", "21", "22", "23", "3a", "3b", "3c",
+                 // " 31", "32", "33"]
+               }
+
+             }
+```
 
 #### Expected input
 The input is expected to be an array of characters expected to be used i.e.
