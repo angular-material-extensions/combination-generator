@@ -272,7 +272,7 @@ THE SOFTWARE.
 MIT
 MIT
 
-ngx-combination-generator@1.0.0
+ngx-combination-generator@1.0.1
 MIT
 The MIT License (MIT)
 
