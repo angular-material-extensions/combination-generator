@@ -70,7 +70,7 @@ export class GettingStartedComponent implements OnInit {
 
                constructor(public generator: NgxCombinationGeneratorService) {
                }
-               
+
                generate() {
                  this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max);
                  console.log("this.combinationsList = ", this.combinationsList);
@@ -84,6 +84,7 @@ export class GettingStartedComponent implements OnInit {
 
   min = 1;
   max = 2;
+  unique = false;
   selectedChars: string;
   charsList: string[] = ['a', 'b', 'c', '1', '2', '3'];
   combinationsList: string[] = [];
@@ -133,8 +134,7 @@ export class GettingStartedComponent implements OnInit {
   }
 
   generate() {
-    this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max);
-    console.log('this.combinationsList = ', this.combinationsList);
+    this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max, this.unique);
   }
 
 }

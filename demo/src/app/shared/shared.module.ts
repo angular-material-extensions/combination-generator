@@ -8,7 +8,9 @@ import {
   MatDividerModule,
   MatIconModule,
   MatInputModule,
-  MatSliderModule, MatSnackBarModule
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -39,6 +41,7 @@ import {HighlightModule} from 'ngx-highlightjs';
       MatButtonModule,
       MatIconModule,
       MatSliderModule,
+      MatSlideToggleModule,
       MatDividerModule,
       MatSnackBarModule
     ],
@@ -56,6 +59,7 @@ import {HighlightModule} from 'ngx-highlightjs';
     MatButtonModule,
     MatIconModule,
     MatSliderModule,
+    MatSlideToggleModule,
     MatDividerModule,
     MatSnackBarModule,
     DisqusModule,

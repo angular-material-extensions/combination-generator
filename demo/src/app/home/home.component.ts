@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   min = 1;
   max = 2;
+  unique = false;
   selectedChars: string;
   charsList: string[] = [];
   combinationsList: string[] = [];
@@ -52,7 +53,7 @@ export class HomeComponent implements OnInit {
   }
 
   generate() {
-    this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max);
+    this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max, this.unique);
   }
 
 }

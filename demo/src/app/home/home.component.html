@@ -60,7 +60,7 @@
           </div>
           <div>
             <mat-card>
-              <mat-card-title>Config</mat-card-title>
+              <mat-card-title>Configuration</mat-card-title>
               <mat-card-content>
                 <div>
                   <mat-slider class="full-width" color="primary" [(ngModel)]="min" min="0" max="10" step="1"
@@ -71,6 +71,9 @@
                   <mat-slider class="full-width" color="accent" [(ngModel)]="max" min="1" max="10" step="1"
                               aria-label="Slider with ngModel"></mat-slider>
                   <input class="full-width" [(ngModel)]="max" type="number" title="maximum value for the generator">
+                </div>
+                <div style="margin-top: 1rem">
+                  <mat-slide-toggle [(ngModel)]="unique">Unique</mat-slide-toggle>
                 </div>
               </mat-card-content>
             </mat-card>
