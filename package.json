@@ -1,19 +1,164 @@
 {
-    "name": "combination-generator",
-    "version": "0.1.0",
-    "description": "generates all combinations (or non-unique permutations) of a given list of characters within a range of string length i.e. generate(['a','f','t','6','-','@','T',';'], 2, 4)",
-    "author": "Andy Sharman",
-    "license": "MIT",
-    "preferGlobal": true,
-    "homepage": "https://github.com/udjamaflip/combination-generator",
-    "repository": "https://github.com/udjamaflip/combination-generator.git",
-    "bin": {
-        "generate-combos": "bin/cli.js"
-    },
-    "keywords": [
-        "combinations",
-        "generator",
-        "string",
-        "permutations"
+  "name": "ngx-combination-generator",
+  "description": "Angular Library built on the top of the combination generator package of @udjamaflip. This library allows you to provide a list of characters and a min/max length of output string to generate a list of all possible combinations (or non-unique permutations of those characters). This is useful for getting a list of characters for brute-forcing or to test password combinations (e.g: for ngx-material-password-strength)",
+  "version": "0.1.0",
+  "homepage": "https://github.com/anthonynahas/combination-generator",
+  "author": {
+    "name": "Andy Sharman and Anthony Nahas",
+    "url": "https://github.com/anthonynahas"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anthonynahas/combination-generator.git"
+  },
+  "bin": {
+    "generate-combos": "bin/cli.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    " library",
+    " cli",
+    " npm",
+    " combinations",
+    " generator",
+    " string",
+    " permutations"
+  ],
+  "bugs": {
+    "url": "https://github.com/anthonynahas/combination-generator/issues"
+  },
+  "private": true,
+  "scripts": {
+    "test": " gulp test",
+    "demo": " gulp build:demo",
+    "clean": "gulp clean:all",
+    "serve:demo": "gulp serve:demo",
+    "serve:demo:ssr": "gulp serve:demo-ssr",
+    "serve:doc": "gulp serve:doc",
+    "build": "gulp build",
+    "build:demo": "gulp build:demo",
+    "build:doc": "gulp build:doc",
+    "link": "gulp link",
+    "unlink": "gulp unlink",
+    "check-travis": " travis-status --repo=anthonynahas/combination-generator --branch=master --fail-pending || echo 'Not yet passing'"
+  },
+  "dependencies": {
+    "@angular/common": "5.0.0",
+    "@angular/core": "5.0.0"
+  },
+  "devDependencies": {
+    "@angular/animations": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/compiler-cli": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@angular/platform-server": "5.0.0",
+    "@compodoc/gulp-compodoc": "0.0.8",
+    "@types/jest": "21.1.9",
+    "@types/lodash": "4.14.92",
+    "@types/node": "8.0.44",
+    "angular-cli-ghpages": "0.5.1",
+    "angular2-template-loader": "0.6.2",
+    "autoprefixer": "7.1.5",
+    "awesome-typescript-loader": "3.3.0",
+    "codelyzer": "4.0.0",
+    "commitplease": "3.1.0",
+    "conventional-github-releaser": "1.1.13",
+    "core-js": "2.5.1",
+    "css-loader": "0.28.7",
+    "cssnano": "3.10.0",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-bump": "2.8.0",
+    "gulp-conventional-changelog": "1.1.6",
+    "gulp-coveralls": "0.1.4",
+    "gulp-file": "0.3.0",
+    "gulp-git": "2.4.2",
+    "gulp-hub": "0.8.0",
+    "gulp-inline-ng2-template": "4.0.0",
+    "gulp-tslint": "8.1.1",
+    "gulp-util": "3.0.8",
+    "html-loader": "0.5.1",
+    "is-docker": "1.1.0",
+    "jest": "^22.0.4",
+    "jest-cli": "^22.4.3",
+    "jest-preset-angular": "5.0.0",
+    "lodash": "4.17.4",
+    "node-sass": "4.5.3",
+    "postcss": "6.0.13",
+    "postcss-strip-inline-comments": "0.1.5",
+    "pump": "1.0.2",
+    "raw-loader": "0.5.1",
+    "rollup": "0.57.0",
+    "rollup-plugin-commonjs": "9.1.0",
+    "rollup-plugin-node-resolve": "3.2.0",
+    "rollup-plugin-sourcemaps": "0.4.2",
+    "rollup-plugin-uglify": "3.0.0",
+    "run-sequence": "2.2.0",
+    "rxjs": "5.5.2",
+    "sass-loader": "6.0.6",
+    "source-map-loader": "0.2.2",
+    "to-string-loader": "1.1.5",
+    "travis-status": "2.0.0",
+    "tslint": "5.7.0",
+    "typescript": "2.4.2",
+    "yargs": "10.0.3",
+    "zone.js": "0.8.14"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/config",
+      "/dist/"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/config/setupJest.ts"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@angular/core",
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/platform-server",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/compiler-cli",
+      "zone.js",
+      "rxjs",
+      "tslint",
+      "gulp-tslint",
+      "typescript",
+      "awesome-typescript-loader",
+      "codelyzer",
+      "@angular/animations",
+      "@types/jasmine"
     ]
+  },
+  "commitplease": {
+    "style": "angular",
+    "types": [
+      "feat",
+      "fix",
+      "docs",
+      "style",
+      "refactor",
+      "perf",
+      "test",
+      "chore",
+      "revert",
+      "demo"
+    ],
+    "scope": "\\S+.*"
+  }
 }

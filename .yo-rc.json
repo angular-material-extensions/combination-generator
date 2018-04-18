@@ -1,0 +1,39 @@
+{
+  "generator-ngx-library": {
+    "version": "5.7.1",
+    "authorName": "anthonynahas",
+    "authorEmail": "anthony.na@hotmail.de",
+    "githubUsername": "anthonynahas",
+    "githubRepoName": "combination-generator",
+    "projectName": "ngx-combination-generator",
+    "projectVersion": "0.1.0",
+    "projectDescription": "Angular Library built on the top of the combination generator package of @udjamaflip. This library allows you to provide a list of characters and a min/max length of output string to generate a list of all possible combinations (or non-unique permutations of those characters). This is useful for getting a list of characters for brute-forcing or to test password combinations (e.g: for ngx-material-password-strength)",
+    "projectKeywords": [
+      "angular",
+      " library",
+      " cli",
+      " npm",
+      " combinations",
+      " generator",
+      " string",
+      " permutations"
+    ],
+    "ngVersion": "5.0.0",
+    "ngModules": [
+      "core",
+      "common"
+    ],
+    "otherDependencies": [],
+    "dependenciesRange": "^",
+    "ngPrefix": "ngx",
+    "testingFramework": "jest",
+    "useGreenkeeper": true,
+    "useCompodoc": true,
+    "enforceNgGitCommitMsg": true,
+    "exclusions": [
+      "config/karma.conf.js",
+      "config/webpack.test.js",
+      "config/karma-test-shim.js"
+    ]
+  }
+}
