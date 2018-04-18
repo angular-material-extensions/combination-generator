@@ -9,7 +9,12 @@ export class NgxCombinationGeneratorService {
     return `Hello ${name || 'Stanger'}!`;
   }
 
-  loadCombinationList(charList: string[], minCharCount: number, maxCharCount: number): string[] {
+  isUnique(str: string) {
+    const repeats = /(.)\1/;
+    return repeats.test(str)
+  }
+
+  loadCombinationList(charList: string[], minCharCount: number, maxCharCount: number, unique: boolean = false): string[] {
     let currentCode = '';
     let currentCodeLength = minCharCount; // get the first code to work with as a starting point.
     const comboList = [],
@@ -35,7 +40,13 @@ export class NgxCombinationGeneratorService {
       charPos[currentCodeLength - 1]++;
 
       // save the code into the array
-      comboList.push(currentCode);
+      if (unique) {
+        if (!this.isUnique(currentCode)) {
+          comboList.push(currentCode);
+        }
+      } else {
+        comboList.push(currentCode);
+      }
 
       // now handle overflow - gotta go through array backwards
       let overflowCount = 0;
