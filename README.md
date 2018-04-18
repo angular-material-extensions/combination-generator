@@ -2,7 +2,7 @@
   <img height="256px" width="256px" style="text-align: center;" src="https://cdn.rawgit.com/anthonynahas/combination-generator/master/demo/src/assets/logo.svg">
 </p>
 
-# combination-generator - Angular Library built on the top of the combination generator package of @udjamaflip.
+# combination-generator - Angular Library built on the top of the combination generator package of @udjamaflip in order to generate all possible (unique) permutations of a provided list of characters.
  This library allows you to provide a list of characters and a min/max length of output string to generate a 
  list of all possible combinations (or non-unique permutations of those characters). This is useful for getting a
   list of characters for brute-forcing or to test password combinations (e.g: for ngx-material-password-strength)
@@ -16,6 +16,12 @@ _NB_: This project is originally forked from [udjamaflip/combination-generator](
 [![dependency Status](https://david-dm.org/anthonynahas/combination-generator/status.svg)](https://david-dm.org/anthonynahas/combination-generator)
 [![devDependency Status](https://david-dm.org/anthonynahas/combination-generator/dev-status.svg?branch=master)](https://david-dm.org/anthonynahas/combination-generator#info=devDependencies)
 [![Greenkeeper Badge](https://badges.greenkeeper.io/anthonynahas/combination-generator.svg)](https://greenkeeper.io/)
+
+<p align="center">
+  <img alt="ngx-combination-generator" style="text-align: center;"
+   src="assets/demo.gif">
+</p>
+
 
 ## Demo
 
@@ -120,6 +126,11 @@ Then run the command:
 
 or use the same command and pipe in to a JSON file for further usage:
 `generate-combos my-input-list.json 1 2 >> my-list-of-character-combinations.json`
+
+## Other Angular Libraries
+- [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
+- [ngx-material-pages](https://github.com/AnthonyNahas/ngx-material-pages)
+- [ngx-material-password-strength](https://github.com/AnthonyNahas/ngx-material-password-strength)
 
 
 ## License
