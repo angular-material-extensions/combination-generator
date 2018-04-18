@@ -237,8 +237,8 @@
  list of all possible combinations (or non-unique permutations of those characters). This is useful for getting a
   list of characters for brute-forcing or to test password combinations (e.g: for ngx-material-password-strength)</p>
 <p>_NB_: This project is originally forked from <a href="https://github.com/udjamaflip/combination-generator">udjamaflip/combination-generator</a>.</p>
-<p><a href="https://badge.fury.io/js/combination-generator"><img src="https://badge.fury.io/js/combination-generator.svg" alt="npm version" class="img-responsive"></a>,
-<a href="https://travis-ci.org/anthonynahas/combination-generator"><img src="https://travis-ci.org/anthonynahas/combination-generator.svg?branch=master" alt="Build Status" class="img-responsive"></a>
+<p><a href="https://badge.fury.io/js/ngx-combination-generator"><img src="https://badge.fury.io/js/ngx-combination-generator.svg" alt="npm version" class="img-responsive"></a>,
+<a href="https://anthonynahas.github.io/ngx-combination-generator"><img src="https://img.shields.io/badge/demo-online-ed1c46.svg" alt="npm" class="img-responsive"></a>
 <a href="https://coveralls.io/github/anthonynahas/combination-generator?branch=master"><img src="https://coveralls.io/repos/github/anthonynahas/combination-generator/badge.svg?branch=master" alt="Coverage Status" class="img-responsive"></a>
 <a href="https://david-dm.org/anthonynahas/combination-generator"><img src="https://david-dm.org/anthonynahas/combination-generator/status.svg" alt="dependency Status" class="img-responsive"></a>
 <a href="https://david-dm.org/anthonynahas/combination-generator#info=devDependencies"><img src="https://david-dm.org/anthonynahas/combination-generator/dev-status.svg?branch=master" alt="devDependency Status" class="img-responsive"></a>
@@ -292,7 +292,36 @@ export class AppModule {
 })
 export class OtherModule {
 }</code></pre><h2 id="usage">Usage</h2>
-<h4 id="expected-input">Expected input</h4>
+<h3 id="with-angular">with Angular</h3>
+<p>Inject the <code>NgxCombinationGeneratorService</code> in your component and go! See below</p>
+<pre class="line-numbers"><code class="language-ts">import {Component, OnInit} from &#39;&#64;angular/core&#39;;
+             import {NgxCombinationGeneratorService} from &#39;ngx-combination-generator&#39;;
+
+             &#64;Component({
+               selector: &#39;app-your-component&#39;,
+               templateUrl: &#39;./your.component.html&#39;,
+               styleUrls: [&#39;./your.component.scss&#39;]
+             })
+             export class YourComponent implements OnInit {
+
+               min = 1;
+               max = 2;
+               selectedChars: string;
+               charsList: string[] = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;];
+               combinationsList: string[] = [];
+
+               constructor(public generator: NgxCombinationGeneratorService) {
+               }
+
+               generate() {
+                 this.combinationsList = this.generator.loadCombinationList(this.charsList, this.min, this.max);
+                 console.log(&quot;this.combinationsList = &quot;, this.combinationsList);
+                 // output = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;aa&quot;, &quot;ab&quot;, &quot;ac&quot;, &quot;a1&quot;, &quot;a2&quot;, &quot;a3&quot;, &quot;ba&quot;, &quot;bb&quot;, &quot;bc&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;b3&quot;, &quot;ca&quot;,
+                 // &quot; cb&quot;, &quot;cc&quot;, &quot;c1&quot;, &quot;c2&quot;, &quot;c3&quot;, &quot;1a&quot;, &quot;1b&quot;, &quot;1c&quot;, &quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;2a&quot;, &quot;2b&quot;, &quot;2c&quot;, &quot;21&quot;, &quot;22&quot;, &quot;23&quot;, &quot;3a&quot;, &quot;3b&quot;, &quot;3c&quot;,
+                 // &quot; 31&quot;, &quot;32&quot;, &quot;33&quot;]
+               }
+
+             }</code></pre><h4 id="expected-input">Expected input</h4>
 <p>The input is expected to be an array of characters expected to be used i.e.</p>
 <pre class="line-numbers"><code class="language-javascript">var myCharacterList = [&#39;a&#39;,&#39;0&#39;,&#39;R&#39;,&#39;3&#39;,&#39;#&#39;,&#39;f&#39;,&#39;P&#39;,&#39;x&#39;];</code></pre><h4 id="code">Code</h4>
 <p>Using that array we can pass it through as the first parameter, and then specify the minimum and maximum length of the combinations to be generated</p>
