@@ -1,0 +1,96 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 d-flex justify-content-center justify-content-md-end">
+        <img src="assets/logo.svg" alt="ngx-combination-generator logo" class="logo">
+      </div>
+      <div class="col-sm-8 text-center text-md-left">
+        <h1>ngx-combination-generator</h1>
+        <p>Angular Library built on the top of the combination generator package of @udjamaflip. This library allows you
+          to provide a list of characters and a min/max length of output string to generate a list of all possible
+          combinations (or non-unique permutations of those characters). This is useful for getting a list of characters
+          for brute-forcing or to test password combinations (e.g: for ngx-material-password-strength)</p>
+        <p>Scroll down to see it in action!</p>
+        <p class="buttons">
+          <a class="btn btn-outline-primary btn-lg" href="https://github.com/anthonynahas/combination-generator"
+             target="_blank"><i class="fa fa-github fa-lg"></i> Code on Github</a>
+          <a class="btn btn-outline-primary btn-lg" href="doc/index.html" target="_blank"><i
+            class="fa fa-book fa-lg"></i> Documentation</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="home">
+  <div class="container">
+
+    <mat-card>
+      <mat-card-title>ngx-combination-generator</mat-card-title>
+      <mat-card-content>
+        <div fxLayout="row" fxLayoutGap="10px">
+          <div fxFlex="80">
+            <mat-card>
+              <mat-card-content>
+                <mat-form-field class="full-width">
+                  <mat-chip-list #charChipList [(ngModel)]="selectedChars">
+                    <mat-chip *ngFor="let char of charsList" [color]="color" (removed)="remove(char)">
+                      {{char}}
+                      <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="Enter your chars here..."
+                           [matChipInputFor]="charChipList"
+                           (matChipInputTokenEnd)="add($event)"/>
+                  </mat-chip-list>
+                </mat-form-field>
+              </mat-card-content>
+            </mat-card>
+            <mat-card *ngIf="combinationsList.length > 0">
+              <mat-card-title>Results</mat-card-title>
+              <mat-card-subtitle>
+                The combinations List contains {{combinationsList.length}} entries
+              </mat-card-subtitle>
+              <mat-card-content>
+                <mat-chip *ngFor="let entry of combinationsList" [color]="color">
+                  {{entry}}
+                </mat-chip>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div>
+            <mat-card>
+              <mat-card-title>Config</mat-card-title>
+              <mat-card-content>
+                <div>
+                  <mat-slider class="full-width" color="primary" [(ngModel)]="min" min="0" max="10" step="1"
+                              aria-label="Slider with ngModel"></mat-slider>
+                  <input class="full-width" [(ngModel)]="min" type="number" title="minimum value for the generator">
+                </div>
+                <div>
+                  <mat-slider class="full-width" color="accent" [(ngModel)]="max" min="1" max="10" step="1"
+                              aria-label="Slider with ngModel"></mat-slider>
+                  <input class="full-width" [(ngModel)]="max" type="number" title="maximum value for the generator">
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button
+                color="warn"
+                (click)="reset()"
+                [disabled]="combinationsList.length === 0">
+          Reset
+        </button>
+        <button mat-raised-button
+                color="primary"
+                (click)="generate()">
+          Generate combinations
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+</section>
