@@ -1,7 +1,7 @@
 {
   "name": "ngx-combination-generator",
   "description": "Angular Library built on the top of the combination generator package of @udjamaflip. This library allows you to provide a list of characters and a min/max length of output string to generate a list of all possible combinations (or non-unique permutations of those characters). This is useful for getting a list of characters for brute-forcing or to test password combinations (e.g: for ngx-material-password-strength)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/anthonynahas/combination-generator",
   "author": {
     "name": "Andy Sharman and Anthony Nahas",

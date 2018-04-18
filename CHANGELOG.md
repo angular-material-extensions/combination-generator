@@ -1,5 +1,15 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/anthonynahas/combination-generator/compare/v1.0.0...v1.0.1) (2018-04-18)
+
+
+### Features
+
+* **ngx-combination-generator:** added unique parameter to load the combinations ([a4e5867](https://github.com/anthonynahas/combination-generator/commit/a4e5867))
+
+
+
 <a name="1.0.0"></a>
-# 1.0.0 (2018-04-18)
+# [1.0.0](https://github.com/anthonynahas/combination-generator/compare/4aaa08c...v1.0.0) (2018-04-18)
 
 
 ### Features
