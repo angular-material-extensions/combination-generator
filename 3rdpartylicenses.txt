@@ -244,7 +244,7 @@ ngx-highlightjs@1.4.1
 MIT
 MIT
 
-@ng-bootstrap/ng-bootstrap@1.0.2
+@ng-bootstrap/ng-bootstrap@1.1.2
 MIT
 The MIT License (MIT)
 
@@ -272,7 +272,7 @@ THE SOFTWARE.
 MIT
 MIT
 
-ngx-combination-generator@1.0.2
+ngx-combination-generator@1.0.3
 MIT
 The MIT License (MIT)
 
@@ -347,7 +347,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-bootstrap@4.0.0
+bootstrap@4.1.0
 MIT
 The MIT License (MIT)
 
