@@ -27,7 +27,7 @@ _NB_: This project is originally forked from [udjamaflip/combination-generator](
 
 View all the directives in action at https://anthonynahas.github.io/combination-generator
 
-## Dependencies
+## Dependencies - Angular V6 is now supported
 * [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
 
 ## Installation
@@ -164,7 +164,9 @@ or use the same command and pipe in to a JSON file for further usage:
 ## Other Angular Libraries
 - [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
 - [ngx-material-pages](https://github.com/AnthonyNahas/ngx-material-pages)
+- [ngx-material-contacts](https://github.com/AnthonyNahas/ngx-material-contacts)
 - [ngx-material-password-strength](https://github.com/AnthonyNahas/ngx-material-password-strength)
+- [ngx-material-faq](https://github.com/AnthonyNahas/ngx-material-faq)
 
 
 ## License
