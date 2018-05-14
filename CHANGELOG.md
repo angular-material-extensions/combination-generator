@@ -1,5 +1,15 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/anthonynahas/combination-generator/compare/v1.0.3...v2.0.0) (2018-05-14)
+
+
+### Features
+
+* **ngx-combination-generator:** supporting angular V6 - material V7 and rxjs v6 ([c8f3f91](https://github.com/anthonynahas/combination-generator/commit/c8f3f91))
+
+
+
 <a name="1.0.3"></a>
-## [1.0.3](https://github.com/anthonynahas/combination-generator/compare/v1.0.2...v1.0.3) (2018-04-22)
+## [1.0.3](https://github.com/anthonynahas/combination-generator/compare/3.1.1...v1.0.3) (2018-04-22)
 
 
 
